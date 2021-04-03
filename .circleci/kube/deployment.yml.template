@@ -17,7 +17,9 @@ spec:
     spec:
       containers:
         - name: hola-docker
-          image: pablokbs/hola-docker:$COMMIT_SHA1
+          image: mitin20/hola-docker:$COMMIT_SHA1
           ports:
             - containerPort: 80
               name: http
+      imagePullSecrets:
+        - name: mitin
